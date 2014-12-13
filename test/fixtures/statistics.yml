@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tipo: MyString
+  fechai: 2014-12-12
+  fechaf: 2014-12-12
+
+two:
+  tipo: MyString
+  fechai: 2014-12-12
+  fechaf: 2014-12-12

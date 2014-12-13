@@ -80,9 +80,15 @@
                   <%#@usuarioname=User.find(c.user_id)%>
                   <td>
                   <h4><span class="glyphicon glyphicon-comment" aria-hidden="true"></span><font face="verdana"> <%= c.contenido %> </font><h4>
+                  </td>
                   <td>
-                  <h4><%= c.contenido %><h4>
-
+                      <%if ( (current_user!=nil)&&((@articulo.user_id == current_user.id) || (current_user.role =="admin"))) %>
+                              <%= link_to "Eliminar", c, method: :delete,  data: {confirm: "Estás Seguro?"},class: 'btn btn-danger btn-sm' %>
+                      <%end%>
+                      <%if current_user!=nil && (c.user_id==current_user.id || @articulo.user_id == current_user.id) %>
+                              <%= link_to "Responder", new_answer_path(c.id), class: "btn btn-primary btn-sm" %>
+                      <%end%>        
+                  </td>
                     <table>
                   <% @respuesta=Answer.where(comment_id: c.id)%>
                   <% @respuesta.each do |r| %>  
@@ -93,7 +99,7 @@
 
                           <div class="alert alert-info" role="alert"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span><font face="verdana"> <%=r.contenido%></font>   
 
-                          <div class="alert alert-info" role="alert"><STRONG>Subastador</STRONG>: <%=r.contenido%>   
+                           
                               <%if current_user!=nil && ((r.user_id==current_user.id || current_user.role =="admin")) %>
                                   <%=link_to "Eliminar",r, method: :delete,  data: {confirm: "Estás Seguro?"},class: "btn btn-danger btn-xs"%>
                               <%end%>
@@ -102,14 +108,7 @@
                       </tr>
                   <%end%>         
                   </table>
-                  <td>
-                      <%if ( (current_user!=nil)&&((@articulo.user_id == current_user.id) || (current_user.role =="admin"))) %>
-                              <%= link_to "Eliminar", c, method: :delete,  data: {confirm: "Estás Seguro?"},class: 'btn btn-danger btn-sm' %>
-                      <%end%>
-                      <%if current_user!=nil && (c.user_id==current_user.id || @articulo.user_id == current_user.id) %>
-                              <%= link_to "Responder", new_answer_path(c.id), class: "btn btn-primary btn-sm" %>
-                      <%end%>        
-                  </td>
+                  
                 
 
 
