@@ -2,10 +2,10 @@
 
     font-family: "Coolvetica";
 
-    src: url("/fonts/coolvetica rg.eot") format('embedded-opentype');
-    src: url("/fonts/coolvetica rg.ttf") format("truetype")
-		 url("/fonts/coolvetica rg.woff") format('woff')
-		 url("/fonts/coolvetica rg.svg") format('svg');    
+    src: asset-url("/fonts/coolvetica rg.eot") format('embedded-opentype');
+    src: asset-url("/fonts/coolvetica rg.ttf") format("truetype")
+		 asset-url("/fonts/coolvetica rg.woff") format('woff')
+		 asset-url("/fonts/coolvetica rg.svg") format('svg');    
 
 
 }
