@@ -11,8 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 20141210212505) do
+ActiveRecord::Schema.define(version: 20141217154001) do
 
   create_table "abilities", force: true do |t|
     t.datetime "created_at"
@@ -39,6 +38,7 @@ ActiveRecord::Schema.define(version: 20141210212505) do
     t.integer  "category_id"
     t.boolean  "finsub"
     t.integer  "winner_id"
+    t.string   "transaccion"
   end
 
   create_table "categories", force: true do |t|
@@ -82,6 +82,14 @@ ActiveRecord::Schema.define(version: 20141210212505) do
 
   add_index "roles", ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id"
   add_index "roles", ["name"], name: "index_roles_on_name"
+
+  create_table "statistics", force: true do |t|
+    t.string   "tipo"
+    t.date     "fechai"
+    t.date     "fechaf"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "transactions", force: true do |t|
     t.float    "cant"
