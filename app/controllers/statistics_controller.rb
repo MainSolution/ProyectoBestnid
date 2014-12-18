@@ -8,7 +8,8 @@ def index
 end
 
 def create
-	@estadistica = Statistic.create!(params.require(:statistic).permit([:tipo,:fechai,:fechaf,:nombreusuarios,:cantidad]))
+
+	@estadistica = Statistic.create!(params.require(:statistic).permit([:tipo,:fechai,:fechaf]))
     redirect_to @estadistica, :notice => "estadistica creada exitosamente"
 end
 

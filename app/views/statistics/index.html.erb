@@ -14,6 +14,7 @@
 <% @est.each do |e| %>
    <tr>
 	    <td><font face="verdana"><%= link_to e.id, statistics_mostrar_path(e.id)  %></font></td>
+
         <td><font face="verdana"><%= e.tipo %></font></td>
    </tr>     
 <%end%>   

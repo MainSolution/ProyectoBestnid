@@ -11,7 +11,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141218180538) do
+
+ActiveRecord::Schema.define(version: 20141212192353) do
 
   create_table "abilities", force: true do |t|
     t.datetime "created_at"
@@ -83,8 +84,18 @@ ActiveRecord::Schema.define(version: 20141218180538) do
   add_index "roles", ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id"
   add_index "roles", ["name"], name: "index_roles_on_name"
 
+<<<<<<< HEAD
 # Could not dump table "statistics" because of following NoMethodError
 #   undefined method `[]' for nil:NilClass
+=======
+  create_table "statistics", force: true do |t|
+    t.string   "tipo"
+    t.date     "fechai"
+    t.date     "fechaf"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+>>>>>>> 10fc6441f593f04887b01aee1c3fdc370d8df71a
 
   create_table "transactions", force: true do |t|
     t.float    "cant"

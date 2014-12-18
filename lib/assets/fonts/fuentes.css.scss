@@ -1,0 +1,49 @@
+@font-face {
+
+    font-family: "Coolvetica";
+
+    
+        src: url("assets/fonts/coolvetica rg.eot") format('embedded-opentype');
+    src: url("assets/fonts/coolvetica rg.ttf") format("truetype"),
+		 url("assets/fonts/coolvetica rg.woff") format('woff'),
+		 url("assets/fonts/coolvetica rg.svg") format('svg');   
+
+}
+
+titulo
+{
+ font-family:"Coolvetica";
+ font-size: 45pt;
+ color: #EB1B1B;
+}
+
+subtitulo
+{
+ font-family:"Coolvetica";
+ font-size: 25pt;
+}
+
+thtabla
+{
+ font-family:"Coolvetica";
+ font-size: 15pt;
+}
+
+thtabla2
+{
+ font-family:"Coolvetica";
+ font-size: 17pt;
+ color: #EB1B1B
+}
+
+categoria
+{
+ font-family:"Coolvetica";
+ font-size: 20pt;
+}
+titlogo
+{
+ font-family:"Coolvetica";
+ font-size: 20pt;
+ color: #FFFFFF;
+}
