@@ -2,8 +2,11 @@
 
     font-family: "Coolvetica";
 
-    
-    src: url("/fonts/coolvetica rg.ttf") format("truetype");
+       src: url("assets/fonts/coolvetica rg.eot") format('embedded-opentype');
+    src: url("assets/fonts/coolvetica rg.ttf") format("truetype"),
+		 url("assets/fonts/coolvetica rg.woff") format('woff'),
+		 url("assets/fonts/coolvetica rg.svg") format('svg');     
+
 
 }
 

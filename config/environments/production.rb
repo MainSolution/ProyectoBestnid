@@ -31,7 +31,8 @@ Rails.application.configure do
 
   # Generate digests for assets URLs.
   config.assets.digest = true
-
+  config.assets.paths << Rails.root.join('app', 'assets', 'fonts');
+  config.assets.precompile += %w( .svg .eot .woff .ttf );
   # `config.assets.precompile` has moved to config/initializers/assets.rb
 
   # Specifies the header that your server uses for sending files.
@@ -44,6 +45,9 @@ Rails.application.configure do
   # Set to :debug to see everything in the log.
   config.log_level = :info
 
+
+
+config.serve_static_assets = true
   # Prepend all log lines with the following tags.
   # config.log_tags = [ :subdomain, :uuid ]
 
