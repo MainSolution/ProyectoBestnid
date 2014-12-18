@@ -1,6 +1,6 @@
 <br/>
 <br/>
-<titulo> Usuarios con mas ventas </titulo><br/><br/>
+<titulo> Usuarios con mas compras </titulo><br/><br/>
 <table class="table">	
 	<tr>
 		 <th><thtabla>Nombre</thtabla></th>	
@@ -8,9 +8,8 @@
 		 <th><thtabla>Usuario</thtabla></th>
 		 <th><thtabla>Ventas</thtabla></th>
     </tr>
-    <% @ofertas=Offer.all%>
+    <%@ofertas=Offer.where("created_at.day >= :date1 and updated_at.day >= :date2", date1: )%>
     <% @ofertas.each do |o| %>  	
- 		
  		<tr>
  			 <%= usuario=User.find(o.user_id) %>		
 			 <td> <%= usuario.name %> </td>	

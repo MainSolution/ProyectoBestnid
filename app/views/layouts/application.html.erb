@@ -22,7 +22,7 @@
 			<td><h3><%= link_to "Categorias", categories_path %></h3></td>
 			<%else %>
 			<td><categoria>Categorias</categoria></td>
-			
+			<%end%>
 				 
 		<% categories = Category.all %>
 			<% categories.each do |c| %>
@@ -32,7 +32,6 @@
 				 <% end %>
 			<% end %>
     		
-    		<%end%>
     	</div>
 
 

@@ -1,0 +1,34 @@
+<CENTER>
+<subtitulo> Estadistica - <%=@est.tipo%></subtitulo><br/>
+<thtabla2>Entre <%=@est.fechai%> y <%=@est.fechaf %></thtabla2>
+</CENTER><br/>
+
+
+<table class="table">
+
+	<tr>
+		<th><thtabla> User</thtabla></th>
+		<% if @est.tipo == 'Usuario con mas ventas' %>
+		    <th> Cantidad de Ventas</th>	
+		<% elsif @est.tipo == 'Usuario con mas Articulos'%>
+		    <th><thtabla> Cantidad de Articulos</thtabla></th>
+		<% else %>    
+			<th><thtabla> Cantidad de Compras</thtabla></th>
+		<%end%> 
+	</tr>
+
+	
+
+<% if @ofertas.size == 0 %>
+		<tr class="success"> <td colspan="3"> No disponible</td> </tr>
+ <%else%>
+ <%i=0%>
+	<% @est.username.each do |o|%>
+   <tr>
+   <td> 	<%= o %> </td>
+	<td>   <%= @est.cant[i]%> </td>
+	   <%i=i+1%>
+	  </tr><%end%>
+<%end%>
+
+</table>

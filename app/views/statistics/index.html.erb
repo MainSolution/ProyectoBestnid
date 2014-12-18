@@ -1,0 +1,20 @@
+<br/>
+<CENTER><titulo>Estadisticas</titulo></CENTER>
+<br/>
+<%= link_to "Crear Estadistica",   statistics_new_path()   ,class: "btn btn-danger"  %>
+
+
+<table class="table">
+
+	<tr>
+		<th><thtabla>Estadistica</thtabla></th>
+		<th><thtabla>Tipo</thtabla></th>
+	</tr>
+		
+<% @est.each do |e| %>
+   <tr>
+	    <td><font face="verdana"><%= link_to e.id, statistics_mostrar_path(e.id)  %></font></td>
+        <td><font face="verdana"><%= e.tipo %></font></td>
+   </tr>     
+<%end%>   
+</table>

@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'statistics/create'
+
+  get 'statistics/new'
+
+  get 'statistics/generate'
+
+  get 'statistics/show'
+
+  get 'statistics/index'
+
   get 'transactions/new'
 
   get 'userestas/new'
@@ -25,6 +35,7 @@ Rails.application.routes.draw do
   resources :answers
   resources :userestas
   resources :transactions
+  resources :statistics
   get 'offers/new'
   get 'offers/index'
   get 'offers/update'
@@ -58,6 +69,7 @@ Rails.application.routes.draw do
   get 'categories/:id/recovery', to: 'categories#recovery', as: 'recover_category'
 
  
+   get '/statistics/:id', to: 'statisticss#show', as: 'statistics_mostrar'
 
   root 'articles#home'
   

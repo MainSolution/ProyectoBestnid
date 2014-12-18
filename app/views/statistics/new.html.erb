@@ -1,0 +1,27 @@
+<br/>
+<titulo> Crear estadistica </titulo><br/>
+<br/>
+<% fechainicial = Time.new %>
+<% fechafinal = Time.new %>
+<% @estadistica.fechai = fechainicial %>
+
+<%= form_for @estadistica do |f| %>
+   <%= f.label :tipo %>
+   <%=f.select :tipo, ['Usuario con mas ventas', 'Usuario con mas compras', 'Usuario con mas articulos'] %>
+   <br/>
+   <%= f.label :fechai,'Fecha inicial' %>
+   <%= f.date_select :fechai, class: "form-control"%>
+   <br/>
+<%= f.label :fechai,'Fecha final' %>
+   <%= f.date_select :fechaf, class: "form-control"%>
+   <br/>
+   
+   <br/>
+  
+  
+   <%= f.submit 'Generar estadistica' , class: 'btn btn-danger'%>
+<% end %>
+
+
+
+<% a = Article.last %>
